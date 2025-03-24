@@ -149,7 +149,7 @@ Teams must successfully complete their Round 1 sessions to be eligible for Round
 ];
 export default function EventSchedule() {
   return (
-    <div className="max-w-4xl mx-auto p-4 bg-[#7E22CE] rounded-lg shadow-lg text-white">
+    <div id="event-table" className="max-w-4xl mx-auto p-4 bg-[#7E22CE] rounded-lg shadow-lg text-white">
       <h2 className="text-2xl font-bold text-center mb-4">Event Schedule</h2>
       <div className="overflow-x-auto">
         <table className="w-full bg-white text-black border border-gray-300 text-sm rounded-lg shadow-md">
