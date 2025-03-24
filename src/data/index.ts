@@ -39,7 +39,7 @@ export const stats = [
     title: "Events",
   },
   {
-    count: "Nov 12, 2024 - Feb 22, 2025",
+    count: "Nov 12, 2024 - May 04, 2025",
     title: "Days",
   },
 ];
