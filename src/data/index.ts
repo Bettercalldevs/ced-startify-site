@@ -20,7 +20,7 @@ export const navlinks = [
     href: "#contact",
   },
   {
-    name: "Contact",
+    name: "Event Table",
     href: "#event-table",
   },
 ];
