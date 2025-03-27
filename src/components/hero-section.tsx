@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 // import { MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
