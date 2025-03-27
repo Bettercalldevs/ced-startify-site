@@ -110,6 +110,15 @@ const fadeInUp = {
 
 export default function HeroSection() {
   const targetDate = new Date("2024-11-12T10:30:00");
+  const scrollToEventCard = useCallback(() => {
+    const eventCard = document.getElementById('about-card');
+    if (eventCard) {
+      eventCard.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+    }
+  }, []);
 
   return (
     <section
@@ -180,9 +189,9 @@ export default function HeroSection() {
             </motion.p>
             <motion.div variants={fadeInUp} className="flex gap-4 mt-6">
               <GradientButton
-                href="#about-card"
-                className="w-[30%]"
-                label="Event Registration"
+               onClick={scrollToEventCard}
+               className="w-[30%]"
+               label="Event Registration"
               />
 
             </motion.div>
