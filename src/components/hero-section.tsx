@@ -180,9 +180,9 @@ export default function HeroSection() {
             </motion.p>
             <motion.div variants={fadeInUp} className="flex gap-4 mt-6">
               <GradientButton
-                  onClick={() => setDetailsOpen(true)} // Open the dialog
-                  className="w-[30%]"
-                  label="Event Registration"
+                href="#about-card"
+                className="w-[30%]"
+                label="Event Registration"
               />
 
             </motion.div>
