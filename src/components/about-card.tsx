@@ -64,7 +64,7 @@ export default function AboutCard({
 
   if (!FormComponent) {
     return (
-      <div className="relative flex flex-col text-left bg-purple-700 p-6 rounded-3xl border border-purple-900 overflow-hidden">
+      <div id="about-card" className="relative flex flex-col text-left bg-purple-700 p-6 rounded-3xl border border-purple-900 overflow-hidden">
         <Grid size={20} />
         <TypographyH4 className="text-[22px] underline underline-offset-2 decoration-purple-300 text-white">
           {title}
