@@ -180,10 +180,11 @@ export default function HeroSection() {
             </motion.p>
             <motion.div variants={fadeInUp} className="flex gap-4 mt-6">
               <GradientButton
-                href="#about-card"
-                className="w-[30%]"
-                label="Event Registration"
+                  onClick={() => setDetailsOpen(true)} // Open the dialog
+                  className="w-[30%]"
+                  label="Event Registration"
               />
+
             </motion.div>
             <div className="flex flex-col lg:flex-row items-center justify-between">
               <motion.div
