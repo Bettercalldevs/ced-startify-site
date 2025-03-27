@@ -182,7 +182,7 @@ export default function HeroSection() {
               <GradientButton
                 href="#about-card"
                 className="w-[30%]"
-                label="Register Now"
+                label="Event Registration"
               />
             </motion.div>
             <div className="flex flex-col lg:flex-row items-center justify-between">
