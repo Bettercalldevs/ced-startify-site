@@ -177,12 +177,15 @@ export default function HeroSection() {
               "Startify 3.0: Empowering Stupreneurs, Inspiring Innovations."
             </motion.p>
             <motion.div variants={fadeInUp} className="flex gap-4 mt-6">
-        <GradientButton
-          href="#about"
-          className="w-[30%]"
-          label="Event Registration"
-        />
-      </motion.div>
+              <GradientButton
+                className="w-[30%]"
+                label={
+                        <a href="#about" className="flex items-center">
+                          Event Registration
+                        </a>
+                }
+              />
+            </motion.div>
             <div className="flex flex-col lg:flex-row items-center justify-between">
               <motion.div
                 variants={fadeInUp}
