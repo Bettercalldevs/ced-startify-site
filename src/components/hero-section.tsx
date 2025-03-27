@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 // import { MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -110,15 +110,22 @@ const fadeInUp = {
 
 export default function HeroSection() {
   const targetDate = new Date("2024-11-12T10:30:00");
-  const scrollToEventCard = useCallback(() => {
-    const eventCard = document.getElementById('about-card');
+  const scrollToEventRegistration = () => {
+    // Try multiple selectors to ensure targeting
+    const eventCard = 
+      document.getElementById('about-card') || 
+      document.querySelector('#about-card') ||
+      document.querySelector('[id="about-card"]');
+
     if (eventCard) {
       eventCard.scrollIntoView({ 
         behavior: 'smooth', 
         block: 'start' 
       });
+    } else {
+      console.warn('Event registration card not found');
     }
-  }, []);
+  };
 
   return (
     <section
@@ -188,13 +195,12 @@ export default function HeroSection() {
               "Startify 3.0: Empowering Stupreneurs, Inspiring Innovations."
             </motion.p>
             <motion.div variants={fadeInUp} className="flex gap-4 mt-6">
-              <GradientButton
-               onClick={scrollToEventCard}
-               className="w-[30%]"
-               label="Event Registration"
-              />
-
-            </motion.div>
+        <GradientButton
+          onClick={scrollToEventRegistration}
+          className="w-[30%]"
+          label="Event Registration"
+        />
+      </motion.div>
             <div className="flex flex-col lg:flex-row items-center justify-between">
               <motion.div
                 variants={fadeInUp}
