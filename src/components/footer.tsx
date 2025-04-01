@@ -61,6 +61,12 @@ const Address = () => (
           Rd, Anna University, Guindy, Chennai, Tamil Nadu, 600025
         </a>
       </span>
+      <div className="flex items-center">
+      <Phone className="mr-2 size-4" />
+      <a href="tel:+919363300704" className="hover:text-purple-700">
+        +91 9363300704
+      </a>
+    </div>
     </div>
     <div className="flex items-center">
       <Phone className="mr-2 size-4" />
