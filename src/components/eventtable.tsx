@@ -103,7 +103,25 @@ For any scheduling conflicts, inform organizers immediately.`
   },
   { 
     category: "Bootcamps(Round 1)", 
-    name: "Cohort 7", 
+    name: "Cohort 7 (Apr 01 - Apr 05, 2025)", 
+    dates: "Apr 01 - Apr 05, 2025", 
+    mode: "Online", 
+    time: "6:30 PM - 8:30 PM", 
+    mandatory: `🎓 Important Attendance Requirements:
+
+• All team members must attend every day
+• Sessions run daily during the assigned dates
+• Be online 5 minutes before start time (6:30 PM)
+• Ensure you have a stable internet connection
+• The list will be released soon
+• Mark your calendar for all dates
+
+Please confirm your attendance by responding to the cohort coordinator.
+For any scheduling conflicts, inform organizers immediately.`
+  },
+  { 
+    category: "Bootcamps(Round 1)", 
+    name: "Cohort 8", 
     dates: "To Be Announced", 
     mode: "Online", 
     time: "Schedule Pending", 
