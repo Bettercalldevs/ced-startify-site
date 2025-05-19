@@ -10,14 +10,7 @@ interface Event {
   mandatory?: string;
 }
 
-const events: Event[] = [
-  { 
-    category: "Bootcamps(Round 1)", 
-    name: "Cohort 1 (Feb 25 - Mar 1)", 
-    dates: "Feb 25 - Mar 1, 2025", 
-    mode: "Online", 
-    time: "6:30 PM - 8:30 PM", 
-    mandatory: `🎓 Important Attendance Requirements:
+const COMMON_ATTENDANCE_REQUIREMENTS = `🎓 Important Attendance Requirements:
 
 • All team members must attend every day
 • Sessions run daily during the assigned dates
@@ -27,186 +20,272 @@ const events: Event[] = [
 • Mark your calendar for all dates
 
 Please confirm your attendance by responding to the cohort coordinator.
-For any scheduling conflicts, inform organizers immediately.`
+For any scheduling conflicts, inform organizers immediately.`;
+
+const events: Event[] = [
+  { 
+    category: "Bootcamps(Round 1)", 
+    name: "Cohort 1 (Feb 25 - Mar 1)", 
+    dates: "Feb 25 - Mar 1, 2025", 
+    mode: "Online", 
+    time: "6:30 PM - 8:30 PM"
   },
   { 
     category: "Bootcamps(Round 1)", 
     name: "Cohort 2 (Mar 7 - Mar 11, 2025)", 
     dates: "Mar 7 - Mar 11, 2025", 
     mode: "Online", 
-    time: "6:30 PM - 8:30 PM", 
-    mandatory: `🎓 Important Attendance Requirements:
-
-• All team members must attend every day
-• Sessions run daily during the assigned dates
-• Be online 5 minutes before start time (6:30 PM)
-• Ensure you have a stable internet connection
-• The list will be released soon
-• Mark your calendar for all dates
-
-Please confirm your attendance by responding to the cohort coordinator.
-For any scheduling conflicts, inform organizers immediately.`
+    time: "6:30 PM - 8:30 PM"
   },
   { 
     category: "Bootcamps(Round 1)", 
     name: "Cohort 3,4 (Mar 19 - Mar 24, 2025)", 
     dates: "Mar 19 - Mar 24, 2025", 
     mode: "Online", 
-    time: "6:30 PM - 8:30 PM", 
-    mandatory: `🎓 Important Attendance Requirements:
-
-• All team members must attend every day
-• Sessions run daily during the assigned dates
-• Be online 5 minutes before start time (6:30 PM)
-• Ensure you have a stable internet connection
-• The list will be released soon
-• Mark your calendar for all dates
-
-Please confirm your attendance by responding to the cohort coordinator.
-For any scheduling conflicts, inform organizers immediately.`
+    time: "6:30 PM - 8:30 PM"
   },
   { 
     category: "Bootcamps(Round 1)", 
     name: "Cohort 5 (Mar 24 - Mar 28, 2025)", 
     dates: "Mar 24 - Mar 28, 2025", 
     mode: "Online", 
-    time: "6:30 PM - 8:30 PM", 
-    mandatory: `🎓 Important Attendance Requirements:
-
-• All team members must attend every day
-• Sessions run daily during the assigned dates
-• Be online 5 minutes before start time (6:30 PM)
-• Ensure you have a stable internet connection
-• The list will be released soon
-• Mark your calendar for all dates
-
-Please confirm your attendance by responding to the cohort coordinator.
-For any scheduling conflicts, inform organizers immediately.`
+    time: "6:30 PM - 8:30 PM"
   },
   { 
     category: "Bootcamps(Round 1)", 
     name: "Cohort 6 (Mar 25 - Mar 29, 2025)", 
     dates: "Mar 25 - Mar 29, 2025", 
     mode: "Online", 
-    time: "6:30 PM - 8:30 PM", 
-    mandatory: `🎓 Important Attendance Requirements:
-
-• All team members must attend every day
-• Sessions run daily during the assigned dates
-• Be online 5 minutes before start time (6:30 PM)
-• Ensure you have a stable internet connection
-• The list will be released soon
-• Mark your calendar for all dates
-
-Please confirm your attendance by responding to the cohort coordinator.
-For any scheduling conflicts, inform organizers immediately.`
+    time: "6:30 PM - 8:30 PM"
   },
   { 
     category: "Bootcamps(Round 1)", 
-    name: "Cohort 7 (Apr 01 - Apr 05, 2025)", 
-    dates: "Apr 01 - Apr 05, 2025", 
+    name: "Cohort 7,8,9,10,11 (Apr 1 - May 18, 2025)", 
+    dates: "Mar 25 - Mar 29, 2025", 
     mode: "Online", 
-    time: "6:30 PM - 8:30 PM", 
-    mandatory: `🎓 Important Attendance Requirements:
-
-• All team members must attend every day
-• Sessions run daily during the assigned dates
-• Be online 5 minutes before start time (6:30 PM)
-• Ensure you have a stable internet connection
-• The list will be released soon
-• Mark your calendar for all dates
-
-Please confirm your attendance by responding to the cohort coordinator.
-For any scheduling conflicts, inform organizers immediately.`
+    time: "6:30 PM - 8:30 PM"
   },
+ 
   { 
     category: "Bootcamps(Round 1)", 
-    name: "Cohort 8", 
+    name: "Cohort 12 (May 20 - May 24, 2025)", 
     dates: "To Be Announced", 
     mode: "Online", 
-    time: "Schedule Pending", 
-    mandatory: `🎓 Important Attendance Requirements:
+    time: "6:30 PM - 8:30 PM"
+  },  
+     
+   { 
+    category: "Jury Sessions(Round-2)", 
+    name: "Startup Cafe, Pitch-X", 
+    dates: "Jury Sessions Starting from April 28, 2025",
+    mode: "Online",
+    time: "As Per Schedule",
+    mandatory: `📢 Important Instructions for All Teams 📢
 
-• All team members must attend every day
-• Sessions run daily during the assigned dates
-• Be online 5 minutes before start time (6:30 PM)
-• Ensure you have a stable internet connection
-• The list will be released soon
-• Mark your calendar for all dates
+✅ Presentation Requirements:
+• Present using the Wadhwani-generated PPT template only
+• Screen sharing is mandatory during presentation
+• Time limit: 15 minutes - plan your content accordingly
+• Join Google Meet 10 minutes before your scheduled slot
+• Keep backup internet connection ready
 
-Please confirm your attendance by responding to the cohort coordinator.
-For any scheduling conflicts, inform organizers immediately.`
-  },
-  { 
-    category: "Important Announcement", 
-    name: "Round 2 Details", 
-    dates: "To Be Announced", 
-    mode: "Online", 
-    time: "Schedule Pending", 
-    mandatory: `📢 Round 2 Information:
+📌 Selection Process:
+• Teams will be called randomly based on availability
+• Every team gets an equal chance to present
+• Selection Categories:
+  - Direct Finals Entry
+  - Pre-Finals Qualification
+  - Not Qualified (with feedback for improvement)
 
-Details for Round 2 will be announced shortly. All participants of Round 1 should:
+💡 Pro Tips:
+• Be prepared to present any time when called
+• Test your audio and video before the session
+• Keep your presentation concise and impactful
+• Have all team members present during the pitch
 
-• Complete their assigned Round 1 sessions
-• Stay tuned for Round 2 dates and schedule
-• Watch for official communications about Round 2 format
-• Prepare to participate in advanced activities
-
-Further information about Round 2 will be shared through official channels.
-Teams must successfully complete their Round 1 sessions to be eligible for Round 2.`
+All the best for your presentation!
+– Team CED ❤`
   },
   { category: "Events", name: "Startup Mughavari", dates: "To Be Announced"},
   { category: "Events", name: "Startup Atlas", dates: "To Be Announced" },
   { category: "Events", name: "Intern Hunt", dates: "To Be Announced" },
   { category: "Events", name: "Founder Find", dates: "To Be Announced" },
-  { category: "Pre-Finals", name: "Startup Cafe, GurusPitch, Pitch-X", dates: "April 28 - April 30, 2025" },
-  { category: "Finals", name: "Startup Cafe", dates: "To Be Announced",mandatory: "📢 Place: To Be Announced, Venue: To Be Announced" },
-  { category: "Finals", name: "Pitch-X", dates: "To Be Announced",mandatory: "📢 Place: To Be Announced, Venue: To Be Announced" },
-  { category: "Finals", name: "GurusPitch", dates: "To Be Announced",mandatory: "📢 Place: To Be Announced, Venue: To Be Announced" },
-  { category: "Finals", name: "Scholar Spinoff", dates: "To Be Announced",mandatory: "📢 Place: To Be Announced, Venue: To Be Announced" }
+  { 
+    category: "Pre-Finals", 
+    name: "Startup Cafe, GurusPitch, Pitch-X", 
+    dates: "To Be Announced",
+    
+  },
+  { 
+    category: "Finals", 
+    name: "Startup Cafe", 
+    dates: "To Be Announced",
+    mandatory: "📢 Venue: To Be Announced" 
+  },
+  { 
+    category: "Finals", 
+    name: "Pitch-X", 
+    dates: "To Be Announced",
+    mandatory: "📢 Venue: To Be Announced" 
+  },
+  { 
+    category: "Finals", 
+    name: "GurusPitch", 
+    dates: "To Be Announced",
+    mandatory: "📢 Venue: To Be Announced" 
+  },
+  { 
+    category: "Finals", 
+    name: "Scholar Spinoff", 
+    dates: "To Be Announced",
+    mandatory: "📢 Venue: To Be Announced" 
+  }
 ];
 export default function EventSchedule() {
   return (
-    <div id="event-table" className="max-w-4xl mx-auto p-4 bg-[#7E22CE] rounded-lg shadow-lg text-white">
-      <h2 className="text-2xl font-bold text-center mb-4">Event Schedule</h2>
-      <div className="overflow-x-auto">
-        <table className="w-full bg-white text-black border border-gray-300 text-sm rounded-lg shadow-md">
-          <thead>
-            <tr className="bg-[#7E22CE] text-white text-left">
-              <th className="border px-3 py-2">Category</th>
-              <th className="border px-3 py-2">Name</th>
-              <th className="border px-3 py-2">Dates</th>
-              <th className="border px-3 py-2">Mode</th>
-              <th className="border px-3 py-2">Time</th>
-              <th className="border px-3 py-2">Mandatory</th>
-            </tr>
-          </thead>
-          <tbody>
-            {events.map((event, index) => (
-              <tr
-                key={index}
-                className="text-center border even:bg-gray-100 hover:bg-gray-300 transition-all duration-300"
-              >
-                <td className="border px-3 py-2 flex items-center justify-center gap-2 text-indigo-600 font-medium">
-                  <Calendar size={18} weight="bold" className="text-blue-600" /> {event.category}
-                </td>
-                <td className="border px-3 py-2 font-semibold">{event.name}</td>
-                <td className="border px-3 py-2 flex items-center justify-center gap-2 text-green-600 font-medium">
-                  <Clock size={18} weight="bold" className="text-green-600" /> {event.dates}
-                </td>
-                <td className="border px-3 py-2 font-semibold text-purple-600">{event.mode}</td>
-                <td className="border px-3 py-2 font-semibold text-red-600">{event.time}</td>
-                <td className="border px-3 py-2 text-left whitespace-pre-wrap bg-red-50 p-2 rounded-lg relative">
-                  <div className="max-h-20 overflow-y-auto pr-2 flex items-start gap-2">
-                  <AlertTriangle size={18} className="text-red-600 mt-1" />
-                    <span>{event.mandatory}</span>
+    <div className="mx-auto max-w-7xl p-2 sm:p-4">
+      <div className="mb-6 sm:mb-8 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
+          Event Schedule
+        </h2>
+        <p className="mt-2 text-base sm:text-lg leading-8 text-gray-600">
+          Stay updated with our upcoming events and bootcamps
+        </p>
+      </div>
+
+      {/* Add Common Requirements Section */}
+      <div className="mb-6 rounded-lg bg-red-50 p-4">
+        <div className="flex gap-2">
+          <AlertTriangle size={20} className="mt-0.5 flex-shrink-0 text-red-600" />
+          <div className="text-sm text-gray-900 whitespace-pre-wrap">
+            {COMMON_ATTENDANCE_REQUIREMENTS}
+          </div>
+        </div>
+      </div>
+
+      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow">
+        {/* Mobile View */}
+        <div className="block md:hidden">
+          {events.map((event, index) => (
+            <div key={index} className="border-b border-gray-200 p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <Calendar size={20} weight="bold" className="text-purple-600" />
+                <span className="font-medium text-gray-900">{event.category}</span>
+              </div>
+              <div className="space-y-2">
+                <div className="font-semibold text-gray-900">{event.name}</div>
+                <div className="flex items-center gap-2">
+                  <Clock size={20} weight="bold" className="text-green-600" />
+                  <span className="text-sm text-gray-900">{event.dates}</span>
+                </div>
+                {event.mode && (
+                  <div>
+                    <span className="inline-flex rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700">
+                      {event.mode}
+                    </span>
                   </div>
-                  
-                </td>
+                )}
+                {event.time && (
+                  <div className="text-sm text-gray-900">{event.time}</div>
+                )}
+                {event.mandatory && (
+                  <div className="mt-3 rounded-lg bg-red-50 p-3">
+                    <div className="flex gap-2">
+                      <AlertTriangle size={20} className="mt-0.5 flex-shrink-0 text-red-600" />
+                      <div className="text-sm text-gray-900 whitespace-pre-wrap">
+                        {event.mandatory}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop View */}
+        <div className="hidden md:block overflow-x-auto">
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead>
+              <tr className="bg-gradient-to-r from-purple-600 to-purple-800">
+                <th className="px-4 py-3.5 text-left text-sm font-semibold text-white">
+                  Category
+                </th>
+                <th className="px-4 py-3.5 text-left text-sm font-semibold text-white">
+                  Name
+                </th>
+                <th className="px-4 py-3.5 text-left text-sm font-semibold text-white">
+                  Dates
+                </th>
+                <th className="px-4 py-3.5 text-left text-sm font-semibold text-white">
+                  Mode
+                </th>
+                <th className="px-4 py-3.5 text-left text-sm font-semibold text-white">
+                  Time
+                </th>
+                <th className="px-4 py-3.5 text-left text-sm font-semibold text-white">
+                  Important Info
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              {events.map((event, index) => (
+                <tr key={index} className="group transition-colors hover:bg-gray-50">
+                  <td className="whitespace-nowrap px-4 py-4">
+                    <div className="flex items-center gap-2">
+                      <Calendar 
+                        size={20} 
+                        weight="bold" 
+                        className="text-purple-600" 
+                      />
+                      <span className="font-medium text-gray-900">
+                        {event.category}
+                      </span>
+                    </div>
+                  </td>
+                  <td className="px-4 py-4">
+                    <div className="font-semibold text-gray-900">
+                      {event.name}
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-4">
+                    <div className="flex items-center gap-2">
+                      <Clock 
+                        size={20} 
+                        weight="bold" 
+                        className="text-green-600" 
+                      />
+                      <span className="text-gray-900">{event.dates}</span>
+                    </div>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-4">
+                    <span className="inline-flex rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700">
+                      {event.mode}
+                    </span>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-4">
+                    <span className="text-gray-900">{event.time}</span>
+                  </td>
+                  <td className="px-4 py-4">
+                    {event.mandatory && (
+                      <div className="relative max-h-32 overflow-y-auto rounded-lg bg-red-50 p-3">
+                        <div className="flex gap-2">
+                          <AlertTriangle 
+                            size={20} 
+                            className="mt-0.5 flex-shrink-0 text-red-600" 
+                          />
+                          <div className="text-sm text-gray-900 whitespace-pre-wrap">
+                            {event.mandatory}
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
