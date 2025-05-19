@@ -160,7 +160,7 @@ export default function Footer() {
             </div>
             <div className="rounded-lg bg-white/5 p-4 backdrop-blur-sm">
               <p className="text-sm text-muted-foreground">
-                Startify 3.0 is an International Student Startup Ecosystem Conclave organized by 
+                Startify 3.0 is an National Student Startup Ecosystem Conclave organized by 
                 the Centre for Entrepreneurship Development, Anna University.
               </p>
             </div>
