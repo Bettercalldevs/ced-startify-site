@@ -120,7 +120,7 @@ All the best for your presentation!
     category: "Finals", 
     name: "All the Event's", 
     dates: "OCT 9 & 10",
-    venue: "📢 Venue: CODISSIA Trade Fair Complex, Coimbatore 
+    mandatory: "📢 Venue: CODISSIA Trade Fair Complex, Coimbatore 
 @Tamilnadu Global Startup Summit 2025" 
   }
 ];
