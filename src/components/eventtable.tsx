@@ -118,27 +118,10 @@ All the best for your presentation!
   },
   { 
     category: "Finals", 
-    name: "Startup Cafe", 
-    dates: "To Be Announced",
-    mandatory: "📢 Venue: To Be Announced" 
-  },
-  { 
-    category: "Finals", 
-    name: "Pitch-X", 
-    dates: "To Be Announced",
-    mandatory: "📢 Venue: To Be Announced" 
-  },
-  { 
-    category: "Finals", 
-    name: "GurusPitch", 
-    dates: "To Be Announced",
-    mandatory: "📢 Venue: To Be Announced" 
-  },
-  { 
-    category: "Finals", 
-    name: "Scholar Spinoff", 
-    dates: "To Be Announced",
-    mandatory: "📢 Venue: To Be Announced" 
+    name: "All the Event's", 
+    dates: "OCT 9 & 10",
+    venue: "📢 Venue: CODISSIA Trade Fair Complex, Coimbatore 
+@Tamilnadu Global Startup Summit 2025" 
   }
 ];
 export default function EventSchedule() {
