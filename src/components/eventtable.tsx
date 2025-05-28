@@ -1,4 +1,4 @@
-import { Calendar, Clock } from "@phosphor-icons/react";
+import { Calendar, Clock } from "lucide-react";
 import { AlertTriangle } from "lucide-react";
 
 interface Event {
@@ -61,7 +61,7 @@ const events: Event[] = [
   { 
     category: "Bootcamps(Round 1)", 
     name: "Cohort 7,8,9,10,11 (Apr 1 - May 18, 2025)", 
-    dates: "Mar 25 - Mar 29, 2025", 
+    dates: "Apr 1 - May 18, 2025", 
     mode: "Online", 
     time: "6:30 PM - 8:30 PM"
   },
@@ -69,7 +69,7 @@ const events: Event[] = [
   { 
     category: "Bootcamps(Round 1)", 
     name: "Cohort 12 (May 20 - May 24, 2025)", 
-    dates: "To Be Announced", 
+    dates: "May 20 - May 24, 2025", 
     mode: "Online", 
     time: "6:30 PM - 8:30 PM"
   },  
@@ -113,16 +113,18 @@ All the best for your presentation!
   { 
     category: "Pre-Finals", 
     name: "Startup Cafe, GurusPitch, Pitch-X", 
-    dates: "To Be Announced",
-    
+    dates: "To Be Announced"
   },
   { 
     category: "Finals", 
-    name: "For all Event's", 
+    name: "Tamil Nadu Global Startup Summit 2025 - For all Events", 
     dates: "OCT 9 & 10, 2025",
-    mandatory: "📢 Venue: CODISSIA Trade Fair Complex, Coimbatore.
+    mode: "In-Person",
+    time: "Full Day Event",
+    mandatory: "📢 Venue: CODISSIA Trade Fair Complex, Coimbatore.\n\n🎯 This is the grand finale where all qualified teams will compete for the ultimate prizes and recognition at the Tamil Nadu Global Startup Summit 2025!"
   }
 ];
+
 export default function EventSchedule() {
   return (
     <div className="mx-auto max-w-7xl p-2 sm:p-4">
@@ -151,13 +153,13 @@ export default function EventSchedule() {
           {events.map((event, index) => (
             <div key={index} className="border-b border-gray-200 p-4">
               <div className="flex items-center gap-2 mb-2">
-                <Calendar size={20} weight="bold" className="text-purple-600" />
+                <Calendar size={20} className="text-purple-600" />
                 <span className="font-medium text-gray-900">{event.category}</span>
               </div>
               <div className="space-y-2">
                 <div className="font-semibold text-gray-900">{event.name}</div>
                 <div className="flex items-center gap-2">
-                  <Clock size={20} weight="bold" className="text-green-600" />
+                  <Clock size={20} className="text-green-600" />
                   <span className="text-sm text-gray-900">{event.dates}</span>
                 </div>
                 {event.mode && (
@@ -217,7 +219,6 @@ export default function EventSchedule() {
                     <div className="flex items-center gap-2">
                       <Calendar 
                         size={20} 
-                        weight="bold" 
                         className="text-purple-600" 
                       />
                       <span className="font-medium text-gray-900">
@@ -234,16 +235,17 @@ export default function EventSchedule() {
                     <div className="flex items-center gap-2">
                       <Clock 
                         size={20} 
-                        weight="bold" 
                         className="text-green-600" 
                       />
                       <span className="text-gray-900">{event.dates}</span>
                     </div>
                   </td>
                   <td className="whitespace-nowrap px-4 py-4">
-                    <span className="inline-flex rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700">
-                      {event.mode}
-                    </span>
+                    {event.mode && (
+                      <span className="inline-flex rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700">
+                        {event.mode}
+                      </span>
+                    )}
                   </td>
                   <td className="whitespace-nowrap px-4 py-4">
                     <span className="text-gray-900">{event.time}</span>
