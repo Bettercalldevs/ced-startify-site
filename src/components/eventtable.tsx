@@ -120,8 +120,7 @@ All the best for your presentation!
     category: "Finals", 
     name: "For all Event's", 
     dates: "OCT 9 & 10, 2025",
-    mandatory: "📢 Venue: CODISSIA Trade Fair Complex, Coimbatore. 
-@Tamilnadu Global Startup Summit 2025
+    mandatory: "📢 Venue: CODISSIA Trade Fair Complex, Coimbatore.
   }
 ];
 export default function EventSchedule() {
