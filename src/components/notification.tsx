@@ -30,9 +30,9 @@ const notificationsData: Notification[] = [
     name: "Important Update!",
     action: "",
     post: "Startup Cafe registration",
-    time: "10/03/2025",
+    time: "01/06/2025",
     unread: true,
-    fullDetails: "The Startup Cafe registration deadline has been extended to April 30, 2025. Don't miss this opportunity to register!",
+    fullDetails: "The Startup Cafe registration deadline has been extended to July 31, 2025. Don't miss this opportunity to register!",
   },
   {
     id: 2,
