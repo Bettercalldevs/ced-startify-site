@@ -27,15 +27,6 @@ export const events = [
     imageSrc: "/images/startup-mughavari.webp",
   },
   {
-    id: "e-cell-awards",
-    title: "Golden Star E-Cell Awards",
-    description:
-      "Awards to recognize colleges with exceptional Entrepreneurship Cells that have demonstrated outstanding performance in promoting entrepreneurship activities. Award Categories: 1. Super Star 2. Rising Star",
-    prizeAmount: "19 Awards",
-    regFee: "/images/ecell-fees.webp",
-    imageSrc: "/images/ecell-awards.webp",
-  },
-  {
     id: "gurus-pitch",
     title: "Guru's Pitch",
     description:
