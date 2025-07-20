@@ -94,7 +94,7 @@ function WhatsAppGroupPopup({ onClose }: { onClose: () => void }) {
             </h5>
             <p className="text-gray-600 text-sm leading-relaxed">
               Join our WhatsApp group to receive instant updates, connect with fellow participants, 
-              and never miss important announcements about the Startup Cafe program.
+              and never miss important announcements about our events and programs.
             </p>
           </div>
 
@@ -102,8 +102,8 @@ function WhatsAppGroupPopup({ onClose }: { onClose: () => void }) {
             <p className="text-sm text-blue-800 flex items-start">
               <span className="text-blue-600 mr-2">💡</span>
               <span>
-                <strong>Note:</strong> Make sure to complete the registration form after joining 
-                the group to receive your Team ID and confirmation email.
+                <strong>Note:</strong> Join the group after registering for any one of our events, 
+                or you can join directly to stay updated with all announcements.
               </span>
             </p>
           </div>
