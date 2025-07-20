@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Bell, X, MessageCircle, Download, ChevronDown } from 'lucide-react';
+import { Bell, X, MessageCircle, Download, ChevronDown, Users } from 'lucide-react';
 
 // WhatsApp Icon SVG Component
 const WhatsAppIcon = () => (
@@ -12,7 +12,6 @@ const WhatsAppIcon = () => (
     <path d="M16 .6C7.6.6.6 7.6.6 16c0 2.8.7 5.5 2.1 7.9L.1 31.4l7.7-2c2.3 1.2 4.8 1.9 7.4 1.9 8.4 0 15.4-7 15.4-15.4S24.4.6 16 .6zm0 28c-2.4 0-4.8-.6-6.9-1.8l-.5-.3-4.6 1.2 1.2-4.5-.3-.5C3.6 21 3 18.6 3 16 3 8.8 8.8 3 16 3s13 5.8 13 13-5.8 13-13 13zm7.3-9.7c-.4-.2-2.5-1.2-2.9-1.3-.4-.2-.8-.2-1.1.2s-1.3 1.3-1.6 1.6c-.3.3-.6.3-1 .1-.3-.2-1.2-.4-2.3-1.2-1-.8-1.7-1.8-1.9-2.1s0-.7.3-.9c.3-.3.7-.8 1-.9.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-1.1-2.7-1.5-3.7-.4-.9-.8-.8-1.1-.8h-.9c-.2 0-.6.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.2 4.6.7.3 1.3.5 1.8.6.7.2 1.3.1 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2s-.4-.2-.8-.4z" />
   </svg>
 );
-
 
 // Notification Type Interface
 interface Notification {
@@ -62,6 +61,74 @@ Austartify Team
 🌐 Website: www.austartify.com`
   },
 ];
+
+// WhatsApp Group Join Popup
+function WhatsAppGroupPopup({ onClose }: { onClose: () => void }) {
+  const handleJoinGroup = () => {
+    window.open('https://chat.whatsapp.com/E2IQpEuW2MtHhqRs81XSn1', '_blank');
+    onClose();
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
+      <div className="absolute inset-0 bg-black bg-opacity-50" onClick={onClose} />
+      
+      <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl z-60 m-4">
+        <div className="flex justify-between items-center p-6 border-b">
+          <h4 className="text-xl font-bold text-black flex items-center">
+            <Users className="mr-3 w-6 h-6 text-green-600" />
+            Join Our Community
+          </h4>
+          <button onClick={onClose} className="text-gray-600 hover:text-black">
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="p-6">
+          <div className="text-center mb-6">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <WhatsAppIcon />
+            </div>
+            <h5 className="text-lg font-semibold text-gray-800 mb-2">
+              Stay Connected!
+            </h5>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Join our WhatsApp group to receive instant updates, connect with fellow participants, 
+              and never miss important announcements about the Startup Cafe program.
+            </p>
+          </div>
+
+          <div className="bg-blue-50 p-4 rounded-lg mb-6">
+            <p className="text-sm text-blue-800 flex items-start">
+              <span className="text-blue-600 mr-2">💡</span>
+              <span>
+                <strong>Note:</strong> Make sure to complete the registration form after joining 
+                the group to receive your Team ID and confirmation email.
+              </span>
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <button
+              onClick={handleJoinGroup}
+              className="w-full bg-green-500 text-white py-3 px-4 rounded-lg hover:bg-green-600 transition-colors flex items-center justify-center font-medium"
+            >
+              <WhatsAppIcon />
+              <span className="ml-2">Join WhatsApp Group</span>
+            </button>
+            
+            <button
+              onClick={onClose}
+              className="w-full bg-gray-100 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+            >
+              Maybe Later
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 // Notification Popup Menu
 function NotificationMenu({ onClose }: { onClose: () => void }) {
@@ -193,6 +260,7 @@ function NotificationMenu({ onClose }: { onClose: () => void }) {
 // Combined WhatsApp and Notification Button
 export default function NotificationAndWhatsAppButton() {
   const [isNotificationOpen, setIsNotificationOpen] = useState<boolean>(false);
+  const [isGroupPopupOpen, setIsGroupPopupOpen] = useState<boolean>(false);
   const unreadCount = notificationsData.filter(n => n.unread).length;
 
   const toggleNotifications = () => {
@@ -203,18 +271,35 @@ export default function NotificationAndWhatsAppButton() {
     window.open('https://wa.me/+919363300704', '_blank');
   };
 
+  const handleGroupJoinClick = () => {
+    setIsGroupPopupOpen(true);
+  };
+
   return (
     <div className="fixed right-4 bottom-4 z-50 flex flex-col gap-4">
+      {/* WhatsApp Direct Message Button */}
       <div
         className="bg-green-500 text-white p-3 rounded-full shadow-lg cursor-pointer hover:bg-green-600 transition-all"
         onClick={handleWhatsAppClick}
+        title="Contact us on WhatsApp"
       >
         <WhatsAppIcon />
       </div>
 
+      {/* WhatsApp Group Join Button */}
+      <div
+        className="bg-green-600 text-white p-3 rounded-full shadow-lg cursor-pointer hover:bg-green-700 transition-all"
+        onClick={handleGroupJoinClick}
+        title="Join WhatsApp Group"
+      >
+        <Users className="w-6 h-6" />
+      </div>
+
+      {/* Notification Button */}
       <div
         className="relative bg-blue-600 text-white p-3 rounded-full shadow-lg cursor-pointer hover:bg-blue-700 transition-all group"
         onClick={toggleNotifications}
+        title="View Notifications"
       >
         <Bell className="w-6 h-6" />
         {unreadCount > 0 && (
@@ -224,8 +309,14 @@ export default function NotificationAndWhatsAppButton() {
         )}
       </div>
 
+      {/* Notification Menu */}
       {isNotificationOpen && (
         <NotificationMenu onClose={() => setIsNotificationOpen(false)} />
+      )}
+
+      {/* WhatsApp Group Popup */}
+      {isGroupPopupOpen && (
+        <WhatsAppGroupPopup onClose={() => setIsGroupPopupOpen(false)} />
       )}
     </div>
   );
