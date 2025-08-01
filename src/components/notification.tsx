@@ -268,7 +268,7 @@ export default function NotificationAndWhatsAppButton() {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/+919363300704', '_blank');
+    window.open('https://wa.me/+919884595762', '_blank');
   };
 
   const handleGroupJoinClick = () => {
