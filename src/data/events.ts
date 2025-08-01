@@ -27,7 +27,7 @@ export const events = [
     imageSrc: "/images/startup-mughavari.webp",
   },
   {
-    id: "Faculty-pitch",
+    id: "guru-pitch",
     title: "Faculty Pitch",
     description:
       "To recognize and celebrate the entrepreneurial spirit within academia. This award will highlight successful faculty-led startups that have made significant contributions to innovation and societal impact.",
