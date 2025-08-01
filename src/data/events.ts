@@ -36,6 +36,14 @@ export const events = [
     imageSrc: "/images/faculty_pitch.webp",
   },
   {
+    id: "site-logo",
+    title: "",
+    imageSrc: "/images/logo.webp", // Change to your actual logo path
+    description: "",
+    prizeAmount: "",
+    regFee: "",
+  },
+  {
     id: "intern-hunt",
     title: "Intern Hunt",
     description:
@@ -61,15 +69,6 @@ export const events = [
     prizeAmount: "TBD",
     regFee: "625",
     imageSrc: "/images/startup-district.webp",
-  },
-  {
-    id: "scholars-spin-off",
-    title: "Scholar's Spin off",
-    description:
-      "The Research to Startup initiative aims to empower Ph.D. scholars from Tamil Nadu by bridging the gap between academic research and entrepreneurial ventures. This event is designed to provide a platform for 100 selected Ph.D. scholars to transform their research into viable startups through mentorship, networking, and hands-on guidance.",
-    prizeAmount: "TBD",
-    regFee: "1875",
-    imageSrc: "/images/scholars-spinoff.webp",
   },
   {
     id: "startup-mughavari",
