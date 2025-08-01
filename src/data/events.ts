@@ -6,7 +6,7 @@ export const events = [
       "This hackathon is a multi-stage event designed to guide participants from ideation to prototyping. Participants will engage in workshops, mentorship sessions, and periodic evaluations to refine their prototypes.",
     prizeAmount: "Upto Rs. 3 Lakh Seed Grant per Idea",
     regFee: "625",
-    imageSrc: "/images/startup-cafe.webp",
+    imageSrc: "/images/startupcafe_img.webp",
   },
   {
     id: "pitch-x",
@@ -18,13 +18,13 @@ export const events = [
     imageSrc: "/images/pitch-x.webp",
   },
   {
-    id: "startup-mughavari",
-    title: "Startup Mughavari",
+    id: "scholars-spin-off",
+    title: "Scholar's Spin off",
     description:
-      "Aimed at helping students with validated innovations to register their startups, the startup sprint drive will be held during the conclave to assist in different stages (early-stage ideas, mid-stage validation, incorporation) of company formation and patent filing.",
+      "The Research to Startup initiative aims to empower Ph.D. scholars from Tamil Nadu by bridging the gap between academic research and entrepreneurial ventures. This event is designed to provide a platform for 100 selected Ph.D. scholars to transform their research into viable startups through mentorship, networking, and hands-on guidance.",
     prizeAmount: "TBD",
-    regFee: "1250",
-    imageSrc: "/images/startup-mughavari.webp",
+    regFee: "1875",
+    imageSrc: "/images/scholars-spinoff.webp",
   },
   {
     id: "gurus-pitch",
@@ -54,15 +54,6 @@ export const events = [
     imageSrc: "/images/founder-find.webp",
   },
   {
-    id: "path-finder",
-    title: "StartUp Path Finder",
-    description:
-      "To explore the role of AI in guiding startups toward success. This panel discussion will bring together AI experts and successful entrepreneurs to discuss AI-driven mentorship and decision-making.",
-    prizeAmount: "TBD",
-    regFee: "3125",
-    imageSrc: "/images/path-finder.webp",
-  },
-  {
     id: "startup-district",
     title: "Startup District",
     description:
@@ -79,5 +70,14 @@ export const events = [
     prizeAmount: "TBD",
     regFee: "1875",
     imageSrc: "/images/scholars-spinoff.webp",
+  },
+  {
+    id: "startup-mughavari",
+    title: "Startup Mughavari",
+    description:
+      "Aimed at helping students with validated innovations to register their startups, the startup sprint drive will be held during the conclave to assist in different stages (early-stage ideas, mid-stage validation, incorporation) of company formation and patent filing.",
+    prizeAmount: "TBD",
+    regFee: "1250",
+    imageSrc: "/images/startup-mughavari.webp",
   },
 ];
