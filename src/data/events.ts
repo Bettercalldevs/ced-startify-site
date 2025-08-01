@@ -4,7 +4,7 @@ export const events = [
     title: "Startup Cafe Prototyping Hackathon",
     description:
       "This hackathon is a multi-stage event designed to guide participants from ideation to prototyping. Participants will engage in workshops, mentorship sessions, and periodic evaluations to refine their prototypes.",
-    prizeAmount: "Upto Rs. 2 Lakh Seed Grant per Idea",
+    prizeAmount: "Upto Rs. 3 Lakh Seed Grant per Idea",
     regFee: "625",
     imageSrc: "/images/startup-cafe.webp",
   },
