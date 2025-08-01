@@ -38,7 +38,7 @@ export const events = [
   {
     id: "site-logo",
     title: "",
-    imageSrc: "/images/logo.webp", // Change to your actual logo path
+    imageSrc: "/images/footer_logo.png", // Change to your actual logo path
     description: "",
     prizeAmount: "",
     regFee: "",

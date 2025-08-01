@@ -10,109 +10,15 @@ interface Event {
   mandatory?: string;
 }
 
-const COMMON_ATTENDANCE_REQUIREMENTS = `🎓 Important Attendance Requirements:
-
-• All team members must attend every day
-• Sessions run daily during the assigned dates
-• Be online 5 minutes before start time (6:30 PM)
-• Ensure you have a stable internet connection
-• Check your assigned dates in the member list and verify your startup name in the previously shared name list on WhatsApp.
-• Mark your calendar for all dates
-
-Please confirm your attendance by responding to the cohort coordinator.
-For any scheduling conflicts, inform organizers immediately.`;
-
 const events: Event[] = [
-  { 
-    category: "Bootcamps(Round 1)", 
-    name: "Cohort 1 (Feb 25 - Mar 1)", 
-    dates: "Feb 25 - Mar 1, 2025", 
-    mode: "Online", 
-    time: "6:30 PM - 8:30 PM"
-  },
-  { 
-    category: "Bootcamps(Round 1)", 
-    name: "Cohort 2 (Mar 7 - Mar 11, 2025)", 
-    dates: "Mar 7 - Mar 11, 2025", 
-    mode: "Online", 
-    time: "6:30 PM - 8:30 PM"
-  },
-  { 
-    category: "Bootcamps(Round 1)", 
-    name: "Cohort 3,4 (Mar 19 - Mar 24, 2025)", 
-    dates: "Mar 19 - Mar 24, 2025", 
-    mode: "Online", 
-    time: "6:30 PM - 8:30 PM"
-  },
-  { 
-    category: "Bootcamps(Round 1)", 
-    name: "Cohort 5 (Mar 24 - Mar 28, 2025)", 
-    dates: "Mar 24 - Mar 28, 2025", 
-    mode: "Online", 
-    time: "6:30 PM - 8:30 PM"
-  },
-  { 
-    category: "Bootcamps(Round 1)", 
-    name: "Cohort 6 (Mar 25 - Mar 29, 2025)", 
-    dates: "Mar 25 - Mar 29, 2025", 
-    mode: "Online", 
-    time: "6:30 PM - 8:30 PM"
-  },
-  { 
-    category: "Bootcamps(Round 1)", 
-    name: "Cohort 7,8,9,10,11 (Apr 1 - May 18, 2025)", 
-    dates: "Apr 1 - May 18, 2025", 
-    mode: "Online", 
-    time: "6:30 PM - 8:30 PM"
-  },
  
-  { 
-    category: "Bootcamps(Round 1)", 
-    name: "Cohort 12 (May 20 - May 24, 2025)", 
-    dates: "May 20 - May 24, 2025", 
-    mode: "Online", 
-    time: "6:30 PM - 8:30 PM"
-  },  
-     
-   { 
-    category: "Jury Sessions(Round-2)", 
-    name: "Startup Cafe, Pitch-X", 
-    dates: "Jury Sessions Starting from April 28, 2025",
-    mode: "Online",
-    time: "As Per Schedule",
-    mandatory: `📢 Important Instructions for All Teams 📢
-
-✅ Presentation Requirements:
-• Present using the Wadhwani-generated PPT template only
-• Screen sharing is mandatory during presentation
-• Time limit: 15 minutes - plan your content accordingly
-• Join Google Meet 10 minutes before your scheduled slot
-• Keep backup internet connection ready
-
-📌 Selection Process:
-• Teams will be called randomly based on availability
-• Every team gets an equal chance to present
-• Selection Categories:
-  - Direct Finals Entry
-  - Pre-Finals Qualification
-  - Not Qualified (with feedback for improvement)
-
-💡 Pro Tips:
-• Be prepared to present any time when called
-• Test your audio and video before the session
-• Keep your presentation concise and impactful
-• Have all team members present during the pitch
-
-All the best for your presentation!
-– Team CED ❤`
-  },
+ 
   { category: "Events", name: "Startup Mughavari", dates: "To Be Announced"},
-  { category: "Events", name: "Startup Atlas", dates: "To Be Announced" },
   { category: "Events", name: "Intern Hunt", dates: "To Be Announced" },
   { category: "Events", name: "Founder Find", dates: "To Be Announced" },
   { 
     category: "Pre-Finals", 
-    name: "Startup Cafe, GurusPitch, Pitch-X", 
+    name: "Startup Cafe, Faculty Pitch , Pitch-X", 
     dates: "To Be Announced"
   },
   { 
@@ -135,16 +41,6 @@ export default function EventSchedule() {
         <p className="mt-2 text-base sm:text-lg leading-8 text-gray-600">
           Stay updated with our upcoming events and bootcamps
         </p>
-      </div>
-
-      {/* Add Common Requirements Section */}
-      <div className="mb-6 rounded-lg bg-red-50 p-4">
-        <div className="flex gap-2">
-          <AlertTriangle size={20} className="mt-0.5 flex-shrink-0 text-red-600" />
-          <div className="text-sm text-gray-900 whitespace-pre-wrap">
-            {COMMON_ATTENDANCE_REQUIREMENTS}
-          </div>
-        </div>
       </div>
 
       <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow">

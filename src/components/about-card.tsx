@@ -64,12 +64,12 @@ export default function AboutCard({
 
   if (id === "site-logo") {
     return (
-      <div className="relative flex flex-col items-center justify-center bg-purple-700 p-6 rounded-3xl border border-purple-900 overflow-hidden h-full min-h-[220px]">
+      <div className="relative flex flex-col items-center justify-center p-6 rounded-3xl border border-purple-900 overflow-hidden h-full min-h-[220px] bg-transparent">
         <Grid size={20} />
         <img
           src={imageSrc}
           alt="Site Logo"
-          className="w-28 h-28 object-contain mx-auto"
+          className="w-40 h-40 object-contain mx-auto"
           style={{ filter: "drop-shadow(0 0 12px #a78bfa)" }}
         />
       </div>
