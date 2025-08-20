@@ -84,7 +84,10 @@ const formSchema = z.object({
       required_error: "Please specify IPR status.",
     }
   ),
-  iprProof: z.string().url({ message: "Upload your IPR Proof" }),
+  iprProof: z
+    .string()
+    .url({ message: "Upload your IPR Proof" })
+    .optional(),
 
   // Section 5: Market & Impact
   problemStatement: z
@@ -117,6 +120,14 @@ const formSchema = z.object({
   // consentToShare: z.boolean().refine((val) => val === true, {
   //   message: "You must consent to share details with organizers and investors.",
   // }),
+}).superRefine((data, ctx) => {
+  if (data.iprStatus !== "no" && !data.iprProof) {
+    ctx.addIssue({
+      path: ["iprProof"],
+      code: z.ZodIssueCode.custom,
+      message: "Upload your IPR Proof",
+    });
+  }
 });
 
 export type FormValues = z.infer<typeof formSchema>;
