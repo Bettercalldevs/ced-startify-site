@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { MapPin } from "lucide-react";
+// import { MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import GradientButton from "@/components/gradient-button";
+import { MapPin } from "lucide-react";
 
 function AnimatedDigit({ value }: { value: number }) {
   return (
@@ -109,6 +110,7 @@ const fadeInUp = {
 
 export default function HeroSection() {
   const targetDate = new Date("2024-11-12T10:30:00");
+
   return (
     <section
       id="home"
@@ -178,12 +180,9 @@ export default function HeroSection() {
             </motion.p>
             <motion.div variants={fadeInUp} className="flex gap-4 mt-6">
               <GradientButton
+                href="#about"
                 className="w-[30%]"
-                label={
-                        <a href="#about" className="flex items-center">
-                          Event Registration
-                        </a>
-                }
+                label="Register Now"
               />
             </motion.div>
             <div className="flex flex-col lg:flex-row items-center justify-between">

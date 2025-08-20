@@ -461,7 +461,12 @@ export default function GoldenStarECellAwardsForm({
                 </TypographyP>
               ))}
             </div>
-            
+            <Button
+              onClick={() => window.open("/images/ecell-fees.webp", "_blank")}
+              className="mt-4"
+            >
+              View Registration Fee Details
+            </Button>
           </div>
         )}
 

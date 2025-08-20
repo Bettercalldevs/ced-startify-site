@@ -19,10 +19,6 @@ export const navlinks = [
     name: "Contact",
     href: "#contact",
   },
-  {
-    name: "Event Table",
-    href: "#event-table",
-  },
 ];
 
 export const stats = [
@@ -39,7 +35,7 @@ export const stats = [
     title: "Events",
   },
   {
-    count: "Nov 12, 2024 - Oct 10, 2025",
+    count: "Nov 12, 2024 - Feb 22, 2025",
     title: "Days",
   },
 ];
@@ -219,15 +215,6 @@ export const faqs = [
     answer:
       "To stay informed about Startify 3.0, including event updates, registration deadlines, and special announcements, we recommend following the official event website and social media pages. You can also sign up for our newsletter to receive direct updates.",
   },
-  {
-    question: "Will Startify 3.0 affect my exam schedule?",
-    answer: "Don't worry about your exams! We understand academic commitments are important. All cohort sessions will be conducted in the evening hours for your convenience. Additionally, jury sessions are flexible and can be adjusted based on your availability to ensure there's no conflict with your examination schedule.",
-  },
-  {
-    question: "Why is the submit button disabled?",
-    answer: "The submit button is disabled because you've been on the form page for too long. Web forms have security timeouts that expire after extended periods of inactivity. To solve this issue, simply refresh the page to start a new session. Please don't stay on the form for long periods without submitting - complete your form within 20-30 minutes of opening it."
-  },
-  
 ];
 
 export const indianStates = [

@@ -18,6 +18,7 @@ import GurusPitchForm from "@/components/event-forms/guru-pitch";
 import StartupDistrictForm from "@/components/event-forms/startup-district";
 import GoldenStarECellAwardsForm from "@/components/event-forms/golden-ecell";
 import FounderFindForm from "@/components/event-forms/founder-find";
+import IpToIpoForm from "./event-forms/ip-to-ipo";
 
 interface AboutCardProps {
   id: string;
@@ -53,6 +54,7 @@ export default function AboutCard({
     "founder-find": FounderFindForm,
     "startup-district": StartupDistrictForm,
     "e-cell-awards": GoldenStarECellAwardsForm,
+    "ip-to-ipo": IpToIpoForm,
   };
 
   const FormComponent = formComponents[id];
@@ -61,20 +63,6 @@ export default function AboutCard({
     setDetailsOpen(false);
     setFormOpen(true);
   };
-
-  if (id === "site-logo") {
-    return (
-      <div className="relative flex flex-col items-center justify-center p-6 rounded-3xl border border-purple-900 overflow-hidden h-full min-h-[220px] bg-transparent">
-        <Grid size={20} />
-        <img
-          src={imageSrc}
-          alt="Site Logo"
-          className="w-40 h-40 object-contain mx-auto"
-          style={{ filter: "drop-shadow(0 0 12px #a78bfa)" }}
-        />
-      </div>
-    );
-  }
 
   if (!FormComponent) {
     return (

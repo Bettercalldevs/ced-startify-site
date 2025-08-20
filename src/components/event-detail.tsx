@@ -51,7 +51,7 @@ export default function EventDetailsDialog({
                 <span className="font-medium underline underline-offset-1">
                   Theme:
                 </span>{" "}
-                All Themes
+                Artificial Intelligence and Machine Learning
               </TypographyP>
             )}
             <TypographyP className="!mt-2">
