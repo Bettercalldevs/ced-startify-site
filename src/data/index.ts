@@ -35,10 +35,10 @@ export const stats = [
     title: "Events",
   },
   {
-    count: "Nov 12, 2024 - Feb 22, 2025",
+    count: "Nov 12, 2024 - Oct 10, 2025",
     title: "Days",
   },
-];
+];  
 
 export const schedule = [
   {
