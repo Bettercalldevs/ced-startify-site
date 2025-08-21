@@ -19,6 +19,10 @@ export const navlinks = [
     name: "Contact",
     href: "#contact",
   },
+  {
+    name: "Event Table",
+    href: "#event-table",
+  },
 ];
 
 export const stats = [

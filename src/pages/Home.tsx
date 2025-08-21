@@ -17,7 +17,9 @@ export default function Home() {
       <HeroSection />
       <CMQuote />
       <AboutEvent />
-      <EventTablePopup/>
+      <div id="event-table">
+        <EventTablePopup/>
+      </div>
       <OurStats />
       <FAQSection />
       <Footer />
