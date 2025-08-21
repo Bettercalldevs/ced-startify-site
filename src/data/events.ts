@@ -42,7 +42,7 @@ export const events = [
       "To recognize and celebrate the entrepreneurial spirit within academia. This award will highlight successful faculty-led startups that have made significant contributions to innovation and societal impact.",
     prizeAmount: "TBD",
     regFee: "6250",
-    imageSrc: "/images/gurus-pitch.webp",
+    imageSrc: "/images/faculty_pitch.webp",
   },
   {
     id: "intern-hunt",
