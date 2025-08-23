@@ -219,7 +219,7 @@ export async function apiCreateFounderFindProject(
 }
 
 export async function apiCreateIpToIpoProject(
-  body: IpToIpoSchema // Remove & { paymentId: string }
+  body: IpToIpoSchema & { paymentId: string }
 ) {
   try {
     let response = await api.post("/v1/ip-to-ipo/create-project", body);
