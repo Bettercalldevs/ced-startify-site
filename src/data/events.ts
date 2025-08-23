@@ -1,7 +1,7 @@
 export const events = [
   {
     id: "ip-to-ipo",
-    title: "IP to IPO",
+    title: "Project Sanction Document (upload)",
     description:
       "Got a project or patent? Turn it into a startup!! Pitch now and walk out as a Founder.",
     prizeAmount: "TBD",
