@@ -219,18 +219,37 @@ export async function apiCreateFounderFindProject(
 }
 
 export async function apiCreateIpToIpoProject(
-  body: IpToIpoSchema // Removed & { paymentId: string }
+  body: IpToIpoSchema
 ) {
   try {
-    let response = await api.post("/v1/ip-to-ipo/create-project", body);
-
+    // Log request body
+    console.log("API Request body:", body);
+    
+    const response = await api.post("/v1/ip-to-ipo/create-project", body);
+    
+    console.log("API Raw response:", response);
+    
     const { success, data } = response.data;
-
-    if (!success) throw new Error("Server Error, Try again later!!");
-
+    
+    if (!success) {
+      throw new Error(data.message || "Server Error, Try again later!!");
+    }
+    
     return data.message;
   } catch (error: any) {
-    if (error.response) throw error.response.data;
+    console.error("API Error full details:", error);
+    
+    // Check for validation errors
+    if (error.response?.status === 422) {
+      const validationErrors = error.response.data?.errors;
+      if (validationErrors) {
+        throw new Error(Object.values(validationErrors).flat().join(", "));
+      }
+    }
+    
+    if (error.response?.data) {
+      throw error.response.data;
+    }
     throw error;
   }
 }

@@ -279,10 +279,17 @@ export default function IpToIpoForm() {
 
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      // Direct API call without payment
-      await apiCreateIpToIpoProject(values);
+      // Log the values being sent
+      console.log("Submitting form values:", values);
+
+      // Add logging to check response
+      const response = await apiCreateIpToIpoProject(values);
+      console.log("API Response:", response);
+
       toast.success("Form submitted successfully!");
     } catch (error: any) {
+      // Add detailed error logging
+      console.error("Form submission error details:", error);
       toast.error(error.message || "Something went wrong!");
     }
   };
