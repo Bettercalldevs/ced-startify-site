@@ -5,7 +5,7 @@ export const events = [
     description:
       "Got a project or patent? Turn it into a startup!! Pitch now and walk out as a Founder.",
     prizeAmount: "TBD",
-    regFee: "10",
+    regFee: "0", // Changed from "10" to "0"
     imageSrc: "/images/ip-to-ipo.jpg",
   },
   {
