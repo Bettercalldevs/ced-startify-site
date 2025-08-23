@@ -18,7 +18,7 @@ import {
   MemberDetails,
 } from "@/components/ui/form-components";
 import { TypographyP } from "@/components/ui/typography";
-import { events, indianStates } from "@/data";
+import { indianStates } from "@/data";
 import { UploadToCloudinary } from "@/lib/utils";
 import { apiCreateIpToIpoProject } from "@/api/events";
 
@@ -145,15 +145,10 @@ const memberCountOptions = Array.from({ length: 10 }, (_, i) => ({
   label: `${i + 1} Member${i > 0 ? "s" : ""}`,
 }));
 
-export default function IpToIpoForm({
-  onPaymentBtnOpen,
-}: {
-  onPaymentBtnOpen: (value: boolean) => void;
-}) {
+export default function IpToIpoForm() {
   const [step, setStep] = useState(1);
 
   const totalSteps = 6;
-  const event = events.find((event) => event.id === "ip-to-ipo");
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -282,22 +277,15 @@ export default function IpToIpoForm({
     form,
   ]);
 
-  function handleSubmit(paymentId: string) {
-    toast.promise(
-      apiCreateIpToIpoProject({
-        paymentId,
-        ...form.getValues(),
-      }),
-      {
-        loading: "Submitting...",
-        success: () => {
-          window.location.reload();
-          return "Application submitted successfully!!";
-        },
-        error: () => "Failed to submit your application",
-      }
-    );
-  }
+  const handleSubmit = async (formValues: FormValues) => {
+    try {
+      await apiCreateIpToIpoProject(formValues); // No paymentId
+      toast.success("Application submitted successfully!!");
+      window.location.reload();
+    } catch (error) {
+      toast.error("Failed to submit your application");
+    }
+  };
 
   return (
     <div className="max-w-2xl mx-auto p-4 sm:p-6">
@@ -602,9 +590,8 @@ export default function IpToIpoForm({
           totalSteps={totalSteps}
           onPrevious={prevStep}
           onNext={nextStep}
-          onOpen={onPaymentBtnOpen}
-          callbackFn={handleSubmit}
-          event={{ amount: event?.regFee!, name: "IP to IPO" }}
+          callbackFn={() => form.handleSubmit(handleSubmit)()}
+          onOpen={() => {}} // Pass a no-op function
         />
       </FormLayout>
     </div>
