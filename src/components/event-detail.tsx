@@ -77,7 +77,7 @@ export default function EventDetailsDialog({
                 >
                   View Reg. Fees
                 </a>
-              ) : (
+              ) : regFee === "Nil" ? "No Fee" : (
                 `Rs.${regFee}/-(Inclusive of all taxes)`
               )}
             </TypographyP>
