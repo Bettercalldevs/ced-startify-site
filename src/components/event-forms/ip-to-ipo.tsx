@@ -285,7 +285,7 @@ export default function IpToIpoForm({
   function handleSubmit(paymentId: string) {
     toast.promise(
       apiCreateIpToIpoProject({
-        paymentId,
+        paymentId: "no-payment",
         ...form.getValues(),
       }),
       {
@@ -604,6 +604,7 @@ export default function IpToIpoForm({
           onNext={nextStep}
           onOpen={onPaymentBtnOpen}
           callbackFn={handleSubmit}
+          hasPayment={false}
           event={{ amount: event?.regFee!, name: "IP to IPO" }}
         />
       </FormLayout>
