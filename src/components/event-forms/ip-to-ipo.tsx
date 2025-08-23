@@ -283,6 +283,7 @@ export default function IpToIpoForm({
   ]);
 
   function handleSubmit(paymentId: string) {
+    console.log(paymentId);
     toast.promise(
       apiCreateIpToIpoProject({
         paymentId: "no-payment",
