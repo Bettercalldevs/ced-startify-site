@@ -58,12 +58,43 @@ export default function AboutCard({
   };
 
   const FormComponent = formComponents[id];
+  const isIpToIpo = id === "ip-to-ipo";
 
   const handleApply = () => {
     setDetailsOpen(false);
     setFormOpen(true);
   };
 
+  // For non-ip-to-ipo events, show closed registration message
+  if (!isIpToIpo) {
+    return (
+      <div className="relative flex flex-col justify-center items-center text-center bg-black bg-opacity-70 p-6 rounded-3xl border border-gray-600 overflow-hidden min-h-[200px]">
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <Grid size={20} />
+        <div className="relative z-10 flex flex-col items-center space-y-4">
+          <TypographyH4 className="text-[22px] text-white opacity-60">
+            {title}
+          </TypographyH4>
+          <div className="text-center space-y-2">
+            <TypographyP className="text-white font-semibold text-lg">
+              Registrations Closed
+            </TypographyP>
+            <TypographyP className="text-white text-sm">
+              See you soon in Startify 4.0
+            </TypographyP>
+          </div>
+        </div>
+        <Badge
+          variant="secondary"
+          className="absolute bottom-2 right-2 bg-gray-600 text-white"
+        >
+          Closed
+        </Badge>
+      </div>
+    );
+  }
+
+  // For ip-to-ipo, show the original functionality
   if (!FormComponent) {
     return (
       <div className="relative flex flex-col text-left bg-purple-700 p-6 rounded-3xl border border-purple-900 overflow-hidden">
