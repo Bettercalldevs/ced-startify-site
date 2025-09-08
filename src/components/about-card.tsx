@@ -58,100 +58,30 @@ export default function AboutCard({
   };
 
   const FormComponent = formComponents[id];
-  const isIpToIpo = id === "ip-to-ipo";
-
-  const handleApply = () => {
-    setDetailsOpen(false);
-    setFormOpen(true);
-  };
-
-  // For non-ip-to-ipo events, show closed registration message
-  if (!isIpToIpo) {
-    return (
-      <div className="relative flex flex-col justify-center items-center text-center bg-black bg-opacity-70 p-6 rounded-3xl border border-gray-600 overflow-hidden min-h-[200px]">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <Grid size={20} />
-        <div className="relative z-10 flex flex-col items-center space-y-4">
-          <TypographyH4 className="text-[22px] text-white opacity-60">
-            {title}
-          </TypographyH4>
-          <div className="text-center space-y-2">
-            <TypographyP className="text-white font-semibold text-lg">
-              Registrations Closed
-            </TypographyP>
-            <TypographyP className="text-white text-sm">
-              See you soon in Startify 4.0
-            </TypographyP>
-          </div>
-        </div>
-        <Badge
-          variant="secondary"
-          className="absolute bottom-2 right-2 bg-gray-600 text-white"
-        >
-          Closed
-        </Badge>
-      </div>
-    );
-  }
-
-  // For ip-to-ipo, show the original functionality
-  if (!FormComponent) {
-    return (
-      <div className="relative flex flex-col text-left bg-purple-700 p-6 rounded-3xl border border-purple-900 overflow-hidden">
-        <Grid size={20} />
-        <TypographyH4 className="text-[22px] underline underline-offset-2 decoration-purple-300 text-white">
+  // Show closed registration message for all events
+  return (
+    <div className="relative flex flex-col justify-center items-center text-center bg-black bg-opacity-70 p-6 rounded-3xl border border-gray-600 overflow-hidden min-h-[200px]">
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <Grid size={20} />
+      <div className="relative z-10 flex flex-col items-center space-y-4">
+        <TypographyH4 className="text-[22px] text-white opacity-60">
           {title}
         </TypographyH4>
-        <TypographyP className="text-white">{description}</TypographyP>
-        <Badge
-          variant="secondary"
-          className="absolute bottom-2 right-2 bg-purple-500 text-white hover:bg-purple-600"
-        >
-          Registration Opens Soon
-        </Badge>
+        <div className="text-center space-y-2">
+          <TypographyP className="text-white font-semibold text-lg">
+            Registrations Closed
+          </TypographyP>
+          <TypographyP className="text-white text-sm">
+            See you soon in Startify 4.0
+          </TypographyP>
+        </div>
       </div>
-    );
-  }
-
-  return (
-    <>
-      <Dialog open={detailsOpen} onOpenChange={setDetailsOpen}>
-        <DialogTrigger asChild>
-          <div className="relative h-full flex flex-col text-left bg-purple-700 p-6 rounded-3xl border border-purple-900 overflow-hidden cursor-pointer">
-            <Grid size={20} />
-            <TypographyH4 className="text-[22px] underline underline-offset-2 decoration-purple-300 text-white">
-              {title}
-            </TypographyH4>
-            <TypographyP className="text-white">{description}</TypographyP>
-            <Badge
-              variant="secondary"
-              className="absolute bottom-2 right-2 bg-purple-500 text-white hover:bg-purple-600"
-            >
-              View Details
-            </Badge>
-          </div>
-        </DialogTrigger>
-        <EventDetailsDialog
-          id={id}
-          title={title}
-          description={description}
-          prizeAmount={prizeAmount}
-          regFee={regFee}
-          imageSrc={imageSrc}
-          onApply={handleApply}
-        />
-      </Dialog>
-
-      <Dialog open={formOpen} onOpenChange={setFormOpen}>
-        <DialogTrigger asChild>
-          <span style={{ display: "none" }}></span>
-        </DialogTrigger>
-        <DialogContent className="h-[90%] p-2">
-          <ScrollArea>
-            <FormComponent onPaymentBtnOpen={setFormOpen} />
-          </ScrollArea>
-        </DialogContent>
-      </Dialog>
-    </>
+      <Badge
+        variant="secondary"
+        className="absolute bottom-2 right-2 bg-gray-600 text-white"
+      >
+        Closed
+      </Badge>
+    </div>
   );
 }
