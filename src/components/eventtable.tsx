@@ -13,14 +13,7 @@ interface Event {
 const events: Event[] = [
  
  
-  { category: "Events", name: "Startup Mughavari", dates: "To Be Announced"},
-  { category: "Events", name: "Intern Hunt", dates: "To Be Announced" },
-  { category: "Events", name: "Founder Find", dates: "To Be Announced" },
-  { 
-    category: "Pre-Finals", 
-    name: "Startup Cafe, Faculty Pitch , Pitch-X", 
-    dates: "To Be Announced"
-  },
+  
   { 
     category: "Finals", 
     name: "Tamil Nadu Global Startup Summit 2025 - For all Events", 
