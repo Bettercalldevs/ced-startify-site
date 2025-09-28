@@ -15,8 +15,8 @@ const events: Event[] = [
  
   
   { 
-    category: "Finals", 
-    name: "Tamil Nadu Global Startup Summit 2025 - For all Events", 
+    category: "Startup Summit 2025", 
+    name: "Tamil Nadu Global Startup Summit 2025", 
     dates: "OCT 9 & 10, 2025",
     mode: "In-Person",
     time: "Full Day Event",
