@@ -29,10 +29,10 @@ export default function EventSchedule() {
     <div className="mx-auto max-w-7xl p-2 sm:p-4">
       <div className="mb-6 sm:mb-8 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
-          Event Schedule
+          Event Info
         </h2>
         <p className="mt-2 text-base sm:text-lg leading-8 text-gray-600">
-          Stay updated with our upcoming events and bootcamps
+          Our upcoming events
         </p>
       </div>
 
