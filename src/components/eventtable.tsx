@@ -20,7 +20,7 @@ const events: Event[] = [
     dates: "OCT 9 & 10, 2025",
     mode: "In-Person",
     time: "Full Day Event",
-    mandatory: "📢 Venue: CODISSIA Trade Fair Complex, Coimbatore.\n\n🎯 This is the grand finale where all qualified teams will compete for the ultimate prizes and recognition at the Tamil Nadu Global Startup Summit 2025!"
+    mandatory: "📢 Venue: CODISSIA Trade Fair Complex, Coimbatore."
   }
 ];
 
