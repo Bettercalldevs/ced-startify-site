@@ -210,14 +210,9 @@ export const faqs = [
       "The key outcomes of Startify 3.0 include: \n- Creation and validation of prototypes with potential for commercialization. \n- Recognition and rewards for outstanding colleges, individuals, and startups. \n- Support for formalizing startups through registration drives and mentorship. \n- Opportunities for networking with investors, industry experts, and mentors to help your startup grow.",
   },
   {
-    question: "Where will Startify 3.0 be held?",
-    answer:
-      "Startify 3.0 will be held at Anna University, Chennai. Detailed information regarding the venue, session locations, and directions will be provided to registered participants closer to the event date.",
-  },
-  {
     question: "How do I stay updated about Startify 3.0?",
     answer:
-      "To stay informed about Startify 3.0, including event updates, registration deadlines, and special announcements, we recommend following the official event website and social media pages. You can also sign up for our newsletter to receive direct updates.",
+      "To stay informed about Startify 3.0, including event updates, registration deadlines, and special announcements, we recommend following the official event website and social media pages. You can also join our WhatsApp group or sign up for our newsletter to receive direct updates.",
   },
   {
     question: "Will Startify 3.0 affect my exam schedule?",
